@@ -40,6 +40,7 @@ const Navbar = () => {
         />
       </div>
       {organization && <InviteButton />}
+
       <UserButton />
     </div>
   );
