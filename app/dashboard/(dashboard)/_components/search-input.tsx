@@ -2,11 +2,11 @@
 
 import { Search } from "lucide-react";
 import { useRouter } from "next/navigation";
-// import queryString from "query-string";
 import { ChangeEvent, useState } from "react";
 import { useDebounceValue } from "usehooks-ts";
 
 import { Input } from "@/components/ui/input";
+import queryString from "query-string";
 
 const SearchInput = () => {
   const router = useRouter();
@@ -15,6 +15,17 @@ const SearchInput = () => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
+    const url = queryString.stringifyUrl(
+      {
+        url: "/dashboard",
+        query: {
+          search: debouncedValue || undefined,
+        },
+      },
+      { skipEmptyString: true, skipNull: true }
+    );
+
+    router.push(url);
   };
 
   // useEffect(() => {
