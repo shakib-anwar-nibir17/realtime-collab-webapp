@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner";
 import { ConvexClientProvider } from "@/providers/convex-client-provider";
 import Sidebar from "./_components/Sidebar/Sidebar";
 import Navbar from "./_components/navbar";
@@ -20,6 +21,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
               {/* navbar */}
               <Navbar />
               {children}
+              <Toaster />
             </div>
           </div>
         </div>
