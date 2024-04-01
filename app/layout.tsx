@@ -1,6 +1,3 @@
-import { Toaster } from "@/components/ui/sonner";
-import { ConvexClientProvider } from "@/providers/convex-client-provider";
-import { ModalProvider } from "@/providers/modal-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -20,11 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ConvexClientProvider>
-          <ModalProvider />
-          {children}
-          <Toaster />
-        </ConvexClientProvider>
+        {console.log("Layout")}
+        {children}
       </body>
     </html>
   );
