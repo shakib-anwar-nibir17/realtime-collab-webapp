@@ -1,13 +1,13 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import HomeBar from "@/components/home/HomeBar";
+import HomeHero from "@/components/home/HomeHero";
 
 const Home = () => {
+  console.log("Home page");
   return (
-    <div>
-      <Link href="/dashboard">
-        <Button>Dashboard</Button>
-      </Link>
+    <div className="bg-zinc-950 min-h-screen">
+      <HomeBar />
+      <HomeHero />
     </div>
   );
 };
