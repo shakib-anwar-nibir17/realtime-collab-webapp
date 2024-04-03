@@ -2,7 +2,7 @@
 
 import { memo } from "react";
 
-import { useSelectionBounds } from "@/hooks/hooks/use-selection-bounds";
+import { useSelectionBounds } from "@/hooks/use-selection-bounds";
 import { useSelf, useStorage } from "@/liveblocks.config";
 import { LayerType, Side, XYWH } from "@/types/canvas";
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { RoomProvider } from "@/liveblocks.config";
+import { Layer } from "@/types/canvas";
 import { LiveList, LiveMap, LiveObject } from "@liveblocks/client";
 import { ClientSideSuspense } from "@liveblocks/react";
 import { ReactNode } from "react";
@@ -18,6 +19,8 @@ const Room = ({ children, roomId, fallback }: RoomProps) => {
       initialPresence={{
         cursor: null,
         selection: [],
+        pencilDraft: null,
+        penColor: null,
       }}
       initialStorage={{
         layers: new LiveMap<string, LiveObject<Layer>>(),
